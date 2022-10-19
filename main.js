@@ -2,7 +2,7 @@ noseX = 0;
 noseY = 0;
 
 function preload(){
-    bigode = loadImage("https://i.postimg.cc/QtxrcWz4/bigode-png-vector-1.png");
+    oculos = loadImage("https://i.postimg.cc/G2sKZHR8/oculos-png-oculos-oakley-png-1200-removebg-preview.png");
 }
 
 function setup(){
@@ -22,13 +22,13 @@ function modelLoaded(){
 
 function gotPoses(results){
     console.log(results);
-    noseX = results[0].pose.nose.x-10;
-    noseY = results[0].pose.nose.y;
+    noseX = results[0].pose.nose.x-44;
+    noseY = results[0].pose.nose.y-53;
 }
 
 function draw(){
     image(video, 0, 0, 300, 300);
-    image(bigode, noseX, noseY, 30, 30);
+    image(oculos, noseX, noseY, 100, 50);
 }
 
 function take_snapshot(){
